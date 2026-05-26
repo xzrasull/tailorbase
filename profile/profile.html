@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="tg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Geologica:wght,CRSV@100..900,0&family=Science+Gothic:wght@100..900&family=Tektur:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="profileStyle.css" />
+    <title>Tailor Base</title>
+  </head>
+  <body>
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <button class="drawer-close" id="drawer-close" aria-label="Бастан">
+        &#x2715;
+      </button>
+      <a href="main.html" class="drawer-logo">tailorbase</a>
+      <div class="drawer-pill"><a href="main.html">Дӯстдошта</a></div>
+      <div class="drawer-pill"><a href="main.html">Асосӣ</a></div>
+    </div>
+
+    <header>
+      <nav>
+        <ul>
+          <li class="aboutus"><a href="main.html">Дӯстдошта</a></li>
+          <li><a class="logo" href="main.html">tailorbase</a></li>
+          <li class="login-btn">
+            <input class="search" type="text" placeholder="Ҷустуҷӯ" />
+          </li>
+          <li class="profile">
+            <a href="profile.html"
+              ><img src="../image/profile-logo.png" alt="Профил"
+            /></a>
+          </li>
+        </ul>
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <div class="profile-section">
+      <h1>Профил</h1>
+      <div class="user-info">
+        <span id="user-name">Дар ҳоли боргузорӣ...</span>
+      </div>
+    </div>
+    <hr />
+    <div class="log-out">
+      <button class="logout">Хуруҷ аз система</button>
+    </div>
+
+    <script>
+      const burger = document.getElementById("burger");
+      const drawer = document.getElementById("mobile-drawer");
+      const drawerClose = document.getElementById("drawer-close");
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("open");
+        drawer.classList.toggle("open");
+        document.body.style.overflow = drawer.classList.contains("open")
+          ? "hidden"
+          : "";
+      });
+      drawerClose.addEventListener("click", () => {
+        burger.classList.remove("open");
+        drawer.classList.remove("open");
+        document.body.style.overflow = "";
+      });
+    </script>
+    <script type="module" src="profile.js"></script>
+  </body>
+</html>

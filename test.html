@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailorBase - Forget about paper</title>
+    <style>
+        /* Основные цвета из твоего дизайна */
+:root {
+    --bg-light: #F2E8CF;
+    --dark-green: #4A5D3F;
+    --accent-green: #6A8D63;
+    --text-color: #000000;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', sans-serif; /* Подберем точнее позже */
+    margin: 0;
+}
+
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-btn {
+    background: var(--accent-green);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 50px 10%;
+}
+
+/* Кнопка Log In в центре */
+.main-login-btn {
+    background: var(--accent-green);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 25px;
+    border: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: var(--dark-green);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <button class="nav-btn">About us</button>
+            <h1 class="logo">tailorbase</h1>
+            <button class="nav-btn login-trigger">Log in</button>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h2>Forget about paper notebooks<br>trust TailorBase.</h2>
+            <p>TailorBase is a cloud service for professional tailors... (твой текст)</p>
+            <button class="main-login-btn">Log in</button>
+        </div>
+        <div class="hero-image">
+            <img src="image/tailor-illustration.png" alt="Tailor Illustration">
+        </div>
+    </main>
+
+    <footer>
+        <h2 class="footer-logo">tailorbase</h2>
+        <div class="contacts">
+            <li><a href="https://www.instagram.com/xzrasul">Instagram</a></li>
+            <li><a href="tel:+992200190190">+992200190190</a></li>
+            <li><a href="https://t.me/xzrasul">Telegram</a></li>
+        </div>
+        <p class="copyright">© 2026 Tailor Base. All rights reserved.</p>
+    </footer>
+</body>
+</html>
